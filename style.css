@@ -1,0 +1,71 @@
+*{
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+
+h1{
+  grid-column: 1 / -1;
+  display: flex; /* titel horizontaal midden */
+ justify-content: center; /* titel verticaal midden */
+ padding-top: 20px;
+}
+
+#nav-main li{
+  list-style-type: none;
+}
+
+#nav-main{ /* spreid films over hele pagina links>rechts */
+  grid-column: 1/-1;
+}
+
+#films{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, 315px); /* deze 5 staat voor 5 naast elkaar */
+  grid-template-rows: repeat(20, auto-fit); /* dit staat voor hoelang ze mogen zijn */
+  justify-content: center; /* zet filmrij midden op pagina */
+}
+
+img{ /*foto opvullen tot grid ruimte*/
+  width: 100%;
+  height: 100%;
+}
+
+.radio-button{
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+}
+
+.purpleButton {
+    display: inline;
+  }
+
+label {
+    margin-right: 15px;
+    line-height: 32px;
+  }
+
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+  
+}
+input:checked {
+    border: 6px solid purple;
+  }
